@@ -1,26 +1,48 @@
-# Eniac_Discount-
-Whether or not it’s beneficial to discount products.
-Project objectives & overview : Eniac is an ecommerce company specialising in tech products sales. They are worried about offering aggressive discounts. 
-They want to determine whether offering a discount on their goods would be advantageous using data analytic methods.
-###### Business questions 
-- How should products be classified into different categories in order to simplify reports and analysis?
-- What is the distribution of product prices across different categories?
-  - How many cheap/expensive products do we have?
-  - How many sales/revenue do cheap/expensive products generate?
-  - How big are the discounts by category?
-- How big are the offered discounts as a percentage of the product prices?
-###### Approch and Analysis
-- Data Cleaning 
-  - Removing duplicates rows 
-  - Dealt with products with two dots in the price using Regex
-  - Dealt with missing values
-  - Converting into appropriate data type
-- According to the pricing for completed orders, there are four categories in the data frame.
-  - low price products = 0 - 100
-  - Middle price products = 101 - 1000
-  - High price products = 1001 - 5000
-  - High end products = < 5000 
-- Answering the business queries.
-- Conclusion 
+# Eniac Discount Analysis 💸
 
-#project_group_file_1 and project_group_file_2
+**Is it beneficial for an e-commerce company to discount its products?**
+Exploratory data analysis with pandas answering a pricing-strategy question.
+
+📊 [Final presentation (PDF)](Final_Presentation_Group_2.pdf)
+
+## The Business Problem
+
+Eniac, an e-commerce company specializing in tech products, is worried that its aggressive discounting hurts revenue. Management wants a data-driven answer: **should we keep offering discounts, and on which products?**
+
+## Business Questions
+
+- How should products be classified into categories to simplify reporting?
+- How are product prices distributed across categories?
+- How much revenue do cheap vs. expensive products generate?
+- How large are the discounts - absolute and as a percentage of product price - per category?
+
+## Approach
+
+**1. Data cleaning (pandas)**
+- Removed duplicate rows
+- Fixed corrupted prices (values with two decimal points) using **regex**
+- Handled missing values and converted columns to appropriate data types
+
+**2. Feature engineering**
+Created four price categories from completed orders:
+
+| Category | Price range |
+|---|---|
+| Low price | 0 – 100 € |
+| Mid price | 101 – 1,000 € |
+| High price | 1,001 – 5,000 € |
+| High end | > 5,000 € |
+
+**3. Analysis & visualization** — answered each business question with aggregations and charts, then presented a recommendation.
+
+## Tools
+
+`Python` · `pandas` · `matplotlib / seaborn` · `regex` · `Jupyter Notebook`
+
+## Repository Contents
+
+| File | Description |
+|---|---|
+| `Project_group_file_1.ipynb` | Data cleaning and quality checks |
+| `Project_group_file_2.ipynb` | Analysis and business-question answers |
+| `Final_Presentation_Group_2.pdf` | Final stakeholder presentation |
